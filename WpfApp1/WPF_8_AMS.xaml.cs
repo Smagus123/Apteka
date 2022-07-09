@@ -87,7 +87,10 @@ namespace WpfApp1
             foreach (var item in r)
             {
                 MessageBox.Show(item.Nazwa);
+                item.Nazwa = "Apap 2 - Zaktualizowane dane";
             }
+
+            db.SaveChanges();
         }
     }
 }
