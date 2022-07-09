@@ -160,6 +160,7 @@
     <Content Include="Apteka.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="aptekalogo.png" />
     <Content Include="AptekaMenagementSystemModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AptekaMenagementSystemModels.edmx</DependentUpon>

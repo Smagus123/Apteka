@@ -24,6 +24,8 @@
         <Label Content="Rodzaj:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,320,0,0"/>
         <TextBox x:Name="txtRodzaj2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" Margin="90,323,0,0" TextChanged="TextBox_TextChanged"/>
         <Button x:Name="btnUsunLeki" Content="Usuń Leki" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="358,389,0,0" Click="btnUsunLeki_Click" />
+        <Image  Source="aptekalogo.png"  HorizontalAlignment="Left" Height="163" VerticalAlignment="Top" Width="384" Margin="23,36,0,0"/>
+
 
     </Grid>
 </Window>
