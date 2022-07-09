@@ -74,7 +74,17 @@ namespace WpfApp1
 
         private void gridLeki_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Console.WriteLine(this.gridLeki.SelectedItems);
+            if (this.gridLeki.SelectedItems.Count >= 0)
+            {
+                if (this.gridLeki.SelectedItems[0].GetType() == typeof(Leki))
+                {
+
+                    Leki d = (Leki)this.gridLeki.SelectedItems;
+                    this.txtNazwa2.Text = d.Nazwa;
+                    this.txtProducent2.Text = d.Producent;
+                    this.txtRodzaj2.Text = d.Rodzaj;
+                }
+            }
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)

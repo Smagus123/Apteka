@@ -7,16 +7,22 @@
         mc:Ignorable="d"
         Title="WPF_8_AMS" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="gridLeki" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="772" Margin="10,216,0,0" SelectionChanged="gridLeki_SelectionChanged"/>
-        <Label Content="Nazwa:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,19,0,0"/>
-        <TextBox x:Name="txtNazwa" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="299" Margin="90,22,0,0" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Producent:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,54,0,0"/>
-        <TextBox x:Name="txtProducent" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="299" Margin="90,57,0,0" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Rodzaj:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,90,0,0"/>
-        <TextBox x:Name="txtRodzaj" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="299" Margin="90,93,0,0" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="315,144,0,0" Click="btnDodaj_Click"/>
-        <Button x:Name="btnLoad" Content="Załaduj dane" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="90,144,0,0" Click="btnLoad_Click" />
-        <Button x:Name="btnUpdate" Content="Aktualizuj Leki" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="90,191,0,0" Click="btnUpdate_Click" />
+        <DataGrid x:Name="gridLeki" HorizontalAlignment="Left" Height="161" VerticalAlignment="Top" Width="426" Margin="356,248,0,0" SelectionChanged="gridLeki_SelectionChanged"/>
+        <Label Content="Nazwa:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="422,14,0,0"/>
+        <TextBox x:Name="txtNazwa" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" Margin="489,17,0,0" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Producent:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="422,49,0,0"/>
+        <TextBox x:Name="txtProducent" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" Margin="489,52,0,0" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Rodzaj:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="422,85,0,0"/>
+        <TextBox x:Name="txtRodzaj" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" Margin="489,88,0,0" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="707,139,0,0" Click="btnDodaj_Click"/>
+        <Button x:Name="btnLoad" Content="Załaduj dane" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="489,139,0,0" Click="btnLoad_Click" />
+        <Button x:Name="btnUpdate" Content="Aktualizuj Leki" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="36,364,0,0" Click="btnUpdate_Click" />
+        <Label Content="Nazwa:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,249,0,0"/>
+        <TextBox x:Name="txtNazwa2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" Margin="90,252,0,0" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Producent:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,284,0,0"/>
+        <TextBox x:Name="txtProducent2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" Margin="90,287,0,0" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Rodzaj:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,320,0,0"/>
+        <TextBox x:Name="txtRodzaj2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245" Margin="90,323,0,0" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
 </Window>
