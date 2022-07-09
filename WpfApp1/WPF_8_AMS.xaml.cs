@@ -76,5 +76,18 @@ namespace WpfApp1
         {
             Console.WriteLine(this.gridLeki.SelectedItems);
         }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            AptekaEntities db = new AptekaEntities();
+
+            var r = from d in db.Lekis
+                    where d.Id == 1
+                    select d;
+            foreach (var item in r)
+            {
+                MessageBox.Show(item.Nazwa);
+            }
+        }
     }
 }

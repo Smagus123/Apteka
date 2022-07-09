@@ -15,7 +15,8 @@
         <Label Content="Rodzaj:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,90,0,0"/>
         <TextBox x:Name="txtRodzaj" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="299" Margin="90,93,0,0" TextChanged="TextBox_TextChanged"/>
         <Button x:Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="315,144,0,0" Click="btnDodaj_Click"/>
-        <Button x:Name="btnLoad" Content="Załaduj dane" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="66,144,0,0" Click="btnLoad_Click" />
+        <Button x:Name="btnLoad" Content="Załaduj dane" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="90,144,0,0" Click="btnLoad_Click" />
+        <Button x:Name="btnUpdate" Content="Aktualizuj Leki" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="90,191,0,0" Click="btnUpdate_Click" />
 
     </Grid>
 </Window>
