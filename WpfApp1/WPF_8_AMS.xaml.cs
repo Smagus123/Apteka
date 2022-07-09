@@ -72,19 +72,26 @@ namespace WpfApp1
             this.gridLeki.ItemsSource = db.Lekis.ToList();
         }
 
+
+        private int updatingLekiID = 0;
         private void gridLeki_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (this.gridLeki.SelectedItems.Count >= 0)
-            {
-                if (this.gridLeki.SelectedItems[0].GetType() == typeof(Leki))
+            if (this.gridLeki.SelectedIndex >= 0)
                 {
+                if (this.gridLeki.SelectedItems.Count >= 0)
+                    {
+                        if (this.gridLeki.SelectedItems[0].GetType() == typeof(Leki))
+                            {
 
-                    Leki d = (Leki)this.gridLeki.SelectedItems;
-                    this.txtNazwa2.Text = d.Nazwa;
-                    this.txtProducent2.Text = d.Producent;
-                    this.txtRodzaj2.Text = d.Rodzaj;
+                                Leki d = (Leki)this.gridLeki.SelectedItems[0];
+                                this.txtNazwa2.Text = d.Nazwa;
+                                this.txtProducent2.Text = d.Producent;
+                                this.txtRodzaj2.Text = d.Rodzaj;
+
+                                this.updatingLekiID = d.Id;
+                            }
+                    }
                 }
-            }
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -92,12 +99,16 @@ namespace WpfApp1
             AptekaEntities db = new AptekaEntities();
 
             var r = from d in db.Lekis
-                    where d.Id == 1
+                    where d.Id == this.updatingLekiID
                     select d;
-            foreach (var item in r)
+
+            Leki obj = r.SingleOrDefault();
+
+            if(obj != null)
             {
-                MessageBox.Show(item.Nazwa);
-                item.Nazwa = "Apap 2 - Zaktualizowane dane";
+                obj.Nazwa = this.txtNazwa2.Text;
+                obj.Producent = this.txtProducent2.Text;
+                obj.Rodzaj = this.txtRodzaj2.Text;
             }
 
             db.SaveChanges();
