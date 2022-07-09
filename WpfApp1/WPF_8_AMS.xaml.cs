@@ -109,9 +109,39 @@ namespace WpfApp1
                 obj.Nazwa = this.txtNazwa2.Text;
                 obj.Producent = this.txtProducent2.Text;
                 obj.Rodzaj = this.txtRodzaj2.Text;
+
+                db.SaveChanges();
             }
 
-            db.SaveChanges();
+            
+        }
+
+        private void btnUsunLeki_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult msgBoxResult = MessageBox.Show("Czy na pewno chcesz to usunąć?", "Usuń Leki",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning,
+                MessageBoxResult.No
+                );
+
+            if (msgBoxResult == MessageBoxResult.Yes)
+            {
+
+                AptekaEntities db = new AptekaEntities();
+
+                var r = from d in db.Lekis
+                        where d.Id == this.updatingLekiID
+                        select d;
+
+                Leki obj = r.SingleOrDefault();
+
+                if (obj != null)
+                {
+                    db.Lekis.Remove(obj);
+                    db.SaveChanges();
+                }
+            }
+            
         }
     }
 }
